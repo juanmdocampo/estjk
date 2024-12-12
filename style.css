@@ -48,6 +48,16 @@ body {
     margin-bottom: 10px;
 }
 
+
+.p-nueva {
+    font-family: 'Artifakt Element', sans-serif;
+    font-size: 19px;
+    line-height: 1.5;
+    color: #1D4F9C;
+    margin-bottom: 1em;
+    font-weight: lighter;
+}
+
 .divider {
     width: 90%;
     height: 4px;
@@ -66,6 +76,17 @@ body {
     padding: 10px;
     width: 320px;
     height: 93px;
+    box-shadow: 0 0 10px rgba(138, 138, 138, 0.79);
+    text-align: left;
+    place-content: center;
+    z-index: -1; /* Asegura que los contenedores estén sobre el fondo */
+}
+
+.tramite-containert1 {
+    margin: 20px;
+    padding: 10px;
+    width: 320px;
+    height: 115px;
     box-shadow: 0 0 10px rgba(138, 138, 138, 0.79);
     text-align: left;
     place-content: center;
