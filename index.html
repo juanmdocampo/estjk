@@ -9,6 +9,7 @@
 
   <title>Estudio Jerkovic</title>
   <style>
+    
     .body_index {
       position: absolute;
       margin: 0;
@@ -25,6 +26,33 @@
       left: 0;
       width: 100%;
       height: 100%;
+    }
+
+    .clock-container {
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 30px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .clock {
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      font-size: 20px;
+      color: #1D4F9C;
+      font-weight: bold;
+    }
+
+    .clock span {
+      display: block;
+      font-size: 14px;
+      font-weight: normal;
     }
 
     .main-container {
@@ -258,6 +286,21 @@
     <!-- END NAVBAR -->
 
   <div class="body_index">
+
+
+<!-- Relojes -->
+<div class="clock-container">
+  <div class="clock" id="argClock">
+    <span>Argentina</span>
+    <div id="argTime">--:--:--</div>
+  </div>
+  <div class="clock" id="croClock">
+    <span>Croacia</span>
+    <div id="croTime">--:--:--</div>
+  </div>
+</div>
+
+
   <div class="main-container">
     <p class="main-text">Queremos ser tu nexo con Croacia</p>
   </div>
@@ -287,6 +330,31 @@
         }
       }
     });
+
+
+    function updateClocks() {
+    const argTimeElement = document.getElementById('argTime');
+    const croTimeElement = document.getElementById('croTime');
+
+    // Hora de Argentina (GMT-3)
+    const argDate = new Date();
+    const argOffset = -3 * 60; // Offset en minutos
+    const argLocalTime = new Date(argDate.getTime() + (argDate.getTimezoneOffset() + argOffset) * 60000);
+    argTimeElement.textContent = argLocalTime.toLocaleTimeString('es-AR', { hour12: false });
+
+
+    // Hora de Croacia (GMT+1)
+    const croDate = new Date();
+    const croOffset = 1 * 60; // Offset en minutos
+    const croLocalTime = new Date(croDate.getTime() + (croDate.getTimezoneOffset() + croOffset) * 60000);
+    croTimeElement.textContent = croLocalTime.toLocaleTimeString('hr-HR');
+  }
+
+  // Actualizar los relojes cada segundo
+  setInterval(updateClocks, 1000);
+
+  // Actualizar inmediatamente al cargar
+  updateClocks();
   </script>
 
 </body>

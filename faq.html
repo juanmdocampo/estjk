@@ -342,109 +342,23 @@ h4 {
         </div>
     </section>  
 
-  <!-- <section class="tramites-section">
-    <h2 class="tramites-title">Preguntas Frecuentes</h2>
-    <div class="divider"></div>
 
-
-    <section class="about-section">
-        <div class="about_us">
-      <div class="team-member">
-        <div class="member-description">
-          <h4 class="member-subtitle">¿Sus traducciones me sirven para trámites en el Consulado y/o Embajada?</h4>
-          <p>
-            Si, somos traductores oficiales.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section">
-        <div class="about_us">
-      <div class="team-member">
-        <div class="member-description">
-          <h4 class="member-subtitle">¿Cuánto sale realizar una traducción?</h4>
-          <p>
-            Realizamos cotizaciones vía mail sin costo. Podés completar nuestro formulario de contacto (al pie de la página - link de Formulario Nuevo Cliente) o contactarte vía mail a estudio.jerkovich@gmail.com  con tu consulta.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section">
-        <div class="about_us">
-      <div class="team-member">
-        <div class="member-description">
-          <h4 class="member-subtitle">¿Cómo saco turno para traducciones?</h4>
-          <p>
-            Una vez que nos contactes te enviaremos un formulario para que lo completes. En base a esa información realizamos un análisis de los documentos que vas a necesitar traducir y te acercamos la cotización de los mismos.
-El turno se confirma abonando una seña del 20% de la cotización enviada.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section">
-        <div class="about_us">
-      <div class="team-member">
-        <div class="member-description">
-          <h4 class="member-subtitle">¿Cuáles son los plazos de entrega?</h4>
-          <p>
-            Contamos con 3 modalidades de traducción:
-Estándar: plazo de entrega de 30 días hábiles.
-Rápida: plazo de entrega de hasta 20 días hábiles.
-Exprés:  plazo de entrega de hasta 12 días hábiles.
-Los plazos se cuentan desde el día que recibimos la documentación completa y apostillada, hasta el día de la entrega.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section">
-        <div class="about_us">
-      <div class="team-member">
-        <div class="member-description">
-          <h4 class="member-subtitle">¿Cómo les entrego los documentos para traducirlos?</h4>
-          <p>
-            Toda la documentación debe contar con Apostilla de la Haya. 
-Las apostillas que se realicen de forma física (en Colegio de Escribanos) deberán ser remitidas por correo postal, comisionista o personalmente; las apostillas digitales, los formularios y las hojas de vida pueden ser enviadas por e-mail.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section">
-        <div class="about_us">
-      <div class="team-member">
-        <div class="member-description">
-          <h4 class="member-subtitle">¿Dónde se encuentra Estudio Jerkovic?</h4>
-          <p>
-            Nos encontramos en la ciudad de Rosario, provincia de Santa Fe.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section">
-        <div class="about_us">
-      <div class="team-member">
-        <div class="member-description">
-          <h4 class="member-subtitle">¿Qué es una apostilla? ¿Dónde se tramitan?
-            ¿Tienen un tiempo de validez? ¿Se encargan de conseguir partidas originales de Croacia? ¿Cuentan con servicio de armado y cierre de carpeta?</h4>
-          <p>
-            Para despejar todas las dudas o consultas que tengas por fuera de lo que son las traducciones en sí mismas, contamos con un servicio de asesoría en el que te vamos a acompañar durante todo el proceso. Se realiza por medio de videollamada con una duración de 30 minutos. También contamos con servicio de búsqueda de partidas originales, armado y cierre de carpetas para asegurar una exitosa entrega de la documentación en la dependencia diplomática.
-Para cualquier servicio que necesites podés consultarnos su costo mediante nuestros medios de contacto.
-          </p>
-        </div>
-      </div>
-    </section> -->
 
     <script>
-        // JavaScript para mostrar/ocultar respuestas
-        function toggleAnswer(element) {
-          var answer = element.querySelector('.faq-answer');
-          answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
-        }
+// JavaScript para mostrar/ocultar respuestas
+function toggleAnswer(element) {
+  var answer = element.querySelector('.faq-answer');
+  var icon = element.querySelector('i'); // Obtener el ícono dentro de la pregunta
+  if (answer.style.display === 'none' || answer.style.display === '') {
+    answer.style.display = 'block';
+    icon.classList.remove('fa-chevron-down'); // Elimina la flecha hacia abajo
+    icon.classList.add('fa-chevron-up'); // Añade la flecha hacia arriba
+  } else {
+    answer.style.display = 'none';
+    icon.classList.remove('fa-chevron-up'); // Elimina la flecha hacia arriba
+    icon.classList.add('fa-chevron-down'); // Añade la flecha hacia abajo
+  }
+}
 
 
               // JavaScript para manejar el menú desplegable en pantallas pequeñas y medianas
