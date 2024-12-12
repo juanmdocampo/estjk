@@ -1,0 +1,174 @@
+body {
+    font-family: 'Artifakt Element', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tramites-section {
+    position: relative;
+    /*height: 50vh; /* Ajusta la altura al 50% del viewport */
+  }
+
+.header-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center top;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tramites-container {
+    background-image: url(logo-gris.png); /* Ruta de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; /* Añade un relleno para evitar que el texto se acerque demasiado a los bordes */
+    position: relative;
+    color: #1D4F9C; /* Color de texto dentro de los contenedores */
+    z-index: 0; /* Asegura que el fondo esté detrás de otros elementos */
+}
+
+.tramites-container::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.7); /* Fondo blanco semi-transparente */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+}
+
+.h2 {
+    color: #1D4F9C;
+    margin-bottom: 10px;
+}
+
+.divider {
+    width: 90%;
+    height: 4px;
+    background-color: #1D4F9C;
+    margin: 10px auto;
+}
+
+.tramite-container-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tramite-containert {
+    margin: 20px;
+    padding: 10px;
+    width: 320px;
+    height: 93px;
+    box-shadow: 0 0 10px rgba(138, 138, 138, 0.79);
+    text-align: left;
+    place-content: center;
+    z-index: -1; /* Asegura que los contenedores estén sobre el fondo */
+}
+
+.tramite-container {
+    margin: 20px;
+    padding: 10px;
+    width: 320px;
+    height: 220px;
+    box-shadow: 0 0 10px rgba(138, 138, 138, 0.79);
+    text-align: left;
+    z-index: -1; /* Asegura que los contenedores estén sobre el fondo */
+}
+
+.tramite-container h3 {
+    color: #1D4F9C;
+    margin-bottom: 10px;
+}
+
+.tramite-container p {
+    color: #1D4F9C;
+    margin: 0;
+}
+
+.tramites-title {
+    font-family: 'EB Garamond', serif;
+    color: #1D4F9C;
+    font-size: 30px;
+    text-align: center;
+}
+
+.menu {
+    font-family: 'Artifakt Element';
+    font-size: 18px;
+    color: #1D4F9C;
+    font-weight: bold;
+}
+
+.event-image {
+    width: 100%;
+    height: 100%;
+  }
+
+.evento-container {
+    margin: 20px;
+    padding: 0px;
+    width: 720px;
+    height: 240px;
+    box-shadow: 0 0 10px rgba(138, 138, 138, 0.79);
+    text-align: left;
+    z-index: 1; /* Asegura que los contenedores estén sobre el fondo */
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px 16px;
+
+}
+
+.logo {
+    height: 35px;
+    width: 221px;
+    margin-right: 0; /* Ajusta el espacio entre la imagen y otros elementos en la barra de navegación */
+}
+
+p {
+    color: #1D4F9C;
+    line-height:1.5;
+  }
+
+.about_us {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    width: 70%;
+    text-align: justify;
+  }
+
+  #menuBtn {
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px;
+    padding: 0;
+  }
+  
+  /* Estilo del ícono dentro del botón */
+  #menuBtn i {
+    position: absolute; /* Esto asegura que el ícono esté dentro del área del botón */
+    font-size: 24px;
+    z-index: 5; /* El ícono puede tener un índice más bajo, pero sigue siendo clicable */
+    pointer-events: none; /* Hace que solo el botón reciba los clics */
+  }

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <title>Estudio Jerkovic</title>
+  <style>
+    .body_index {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      background-image: url(puente.jpg); /* Ruta de tu imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* Fija la imagen de fondo al desplazarse */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .main-container {
+      background-color: rgba(29, 79, 156, 0.8); /* Color con transparencia */
+      border-radius: 15px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 40px;
+      padding-right: 40px;
+      text-align: center;
+      max-width: 70%; /* Ancho máximo del 70% de la página */
+     }
+
+    .main-text {
+      font-family: 'Artifakt Element', sans-serif;
+      font-size: 50px;
+      color: #ffffff; /* Color blanco */
+      font-weight: bold; /* Texto en negrita */
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer-container {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      background-color: rgba(29, 79, 156, 0.8); /* Color con transparencia */
+      /* border-radius: 15px; */
+      padding: 5px;
+      text-align: right;
+      max-width: 70%; /* Ancho máximo del 70% de la página */
+    }
+
+    .footer-text {
+      font-family: 'Artifakt Element', sans-serif;
+      font-size: 15px;
+      color: #ffffff; /* Color blanco */
+      font-weight: normal; /* Texto regular */
+      margin: 0;
+      padding: 0;
+    }
+
+        /* STYLE FOR NAVBAR*/
+    .body_nav {
+      position: relative;
+      margin: 0;
+      font-family: 'Artifakt Element', sans-serif;
+    }
+
+    .navbar {
+      height: 51px;
+      background-color: white;
+      overflow: hidden;
+      font-size: 18px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar img {
+      height: 35px;
+      width: 221px;
+      margin: 0;
+    }
+
+    .navbar a, .navbar button {
+      color: #1D4F9C;
+      text-align: center;
+      font-size: 18px;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: white;
+      transition: color 0.3s;
+      display: block;
+    }
+
+    .navbar a:hover, .navbar button:hover {
+      color: #e50d17;
+      background-color: white;
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .dropdown {
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 18px;
+      border: none;
+      outline: none;
+      color: #1D4F9C;
+      background-color: white;
+      font-family: inherit;
+      margin: 0;
+      cursor: pointer;
+      font-weight: bold;
+      transition: color 0.3s;
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      color: #e50d17;
+      background-color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      max-width: 142px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      /* margin-top: 50px; */
+    }
+
+    .dropdown-content a {
+      color: #1D4F9C;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      color: #e50d17;
+      background-color: #f9f9f9;
+    }
+
+    @media screen and (max-width: 900px) {
+      .navbar-large {
+        display: none;
+      }
+
+      .navbar-right {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 51px;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1500;
+      }
+
+      .navbar-right a {
+        display: block;
+        padding: 12px 24px;
+      }
+
+      .navbar-right.show {
+        display: flex;
+      }
+    }
+
+    @media screen and (min-width: 901px) {
+      .navbar-small {
+        display: none;
+      }
+    }
+
+    .navbar button {
+      border: none;
+      background: none;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    /* END STYLE NAVBAR*/
+  </style>
+</head>
+<body>
+
+
+    <!-- Navbar para pantallas grandes -->
+    <div class="body_nav">
+    <div class="navbar navbar-large">
+      <a href="index.html" class="logo-link" style="padding-top: 8px; padding-bottom: 8px;">
+        <div style="display: flex; align-items: center;">
+          <img src="cabecera.png" alt="Estudio Jerkovic" class="logo">
+        </div>
+      </a>
+      <div class="navbar-right">
+        <a href="nosotros.html">Nosotros</a>
+        <div class="dropdown">
+          <button id="servicesBtn" class="dropbtn" onclick="toggleDropdown()">Servicios 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="servicesDropdown">
+            <a href="eventos.html">Eventos</a>
+            <a href="periodismo.html">Periodismo</a>
+            <a href="tramites.html">Trámites</a>
+          </div>
+        </div>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+
+    <!-- Navbar para pantallas pequeñas y medianas -->
+    <div class="navbar navbar-small">
+      <a href="index.html" class="logo-link" style="padding-top: 8px; padding-bottom: 8px;">
+        <div style="display: flex; align-items: center;">
+          <img src="cabecera.png" alt="Estudio Jerkovic" class="logo">
+        </div>
+      </a>
+      <button id="menuBtn" onclick="toggleMenu()" style="background-color: transparent;z-index: 10;">
+        <i class="fa fa-bars" style="z-index: 10;"></i>
+      </button>
+      <div class="navbar-right" id="menuDropdown">
+        <a href="nosotros.html">Nosotros</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="periodismo.html">Periodismo</a>
+        <a href="tramites.html">Trámites</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+  </div>
+    <!-- END NAVBAR -->
+
+  <div class="body_index">
+  <div class="main-container">
+    <p class="main-text">Queremos ser tu nexo con Croacia</p>
+  </div>
+
+  <div class="footer-container">
+    <p class="footer-text">Puente de Pelješac, Croacia</p>
+  </div>
+</div>
+  <script>
+    // JavaScript para manejar el menú desplegable en pantallas pequeñas y medianas
+    function toggleDropdown() {
+      var servicesDropdownSmall = document.getElementById("servicesDropdownSmall");
+      servicesDropdownSmall.classList.toggle("show");
+    }
+
+    function toggleMenu() {
+      var menuDropdown = document.getElementById("menuDropdown");
+      menuDropdown.classList.toggle("show");
+    }
+
+    // Cierra el menú desplegable si haces clic fuera de él
+    window.addEventListener('click', function (event) {
+      if (!event.target.matches('#menuBtn')) {
+        var menuDropdown = document.getElementById("menuDropdown");
+        if (menuDropdown.classList.contains('show')) {
+          menuDropdown.classList.remove('show');
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

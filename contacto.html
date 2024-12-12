@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Nosotros</title>
+  <style>
+    body {
+      font-family: 'Artifakt Element', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .about-section {
+     position: relative;
+     display: flex; /* Agrega display: flex; para utilizar flexbox */
+     justify-content: center; /* Centra los elementos horizontalmente */
+     align-items: center; /* Centra los elementos verticalmente */
+     flex-direction: column; /* Alinea los elementos en columna */
+     text-align: justify;
+     text-align: center;
+}
+
+    .team-member {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(138, 138, 138, 0.79);
+      width: 50%;
+      text-align: center;
+    }
+
+    .team-member img {
+      width: 200px; /* Ajusta el tamaño de la imagen según tus necesidades */
+      height: auto;
+      margin: 20px;
+    }
+
+    .member-description {
+        margin: 40px;
+        align-items: center;
+    }
+
+    .member-subtitle {
+      color: #1D4F9C;
+    }
+
+    .about_us {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0px;
+      padding: 0px;
+      width: 70%;
+      text-align: center;
+    }
+
+    /* Estilos adicionales según tu preferencia */
+    h2{
+      color: #1D4F9C;
+    }
+
+    h3 {
+      color: #1D4F9C;
+      line-height:.5;
+      margin: 0px;
+      text-align: center;
+    }
+
+    h4 {
+      color: #1D4F9C;
+      line-height:1.2;
+      text-align: left;
+    }
+
+    p {
+      color: #1D4F9C;
+      line-height:1.5;
+    }
+
+.contact-form {
+  width: 50%;
+  display:contents;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.form-group {
+  position: relative; /* Necesario para que el dropdown se alinee con el input */
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+label {
+  color: #1D4F9C;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, select, textarea {
+  width: 50%; /* Hace que el input ocupe el 100% del ancho disponible */
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #1D4F9C;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #1D4F9C;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pais-dropdown {
+  display: none;
+  position: center;
+  background-color: #fff;
+  border: 1px solid #1D4F9C;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1;
+  color: #1D4F9C;
+  width: 50%; /* Asegura que el dropdown tenga el mismo tamaño que el input */
+}
+
+.pais-dropdown-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.pais-dropdown-item:hover {
+  background-color: #1D4F9C;
+  color: #fff;
+}
+
+
+    /* STYLE FOR NAVBAR*/
+    body {
+      margin: 0;
+      font-family: 'Artifakt Element', sans-serif;
+    }
+
+    .navbar {
+      height: 51px;
+      background-color: white;
+      overflow: hidden;
+      font-size: 18px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar img {
+      height: 35px;
+      width: 221px;
+      margin: 0;
+    }
+
+    .navbar a, .navbar button {
+      color: #1D4F9C;
+      text-align: center;
+      font-size: 18px;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: white;
+      transition: color 0.3s;
+      display: block;
+    }
+
+    .navbar a:hover, .navbar button:hover {
+      color: #e50d17;
+      background-color: white;
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .dropdown {
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 18px;
+      border: none;
+      outline: none;
+      color: #1D4F9C;
+      background-color: white;
+      font-family: inherit;
+      margin: 0;
+      cursor: pointer;
+      font-weight: bold;
+      transition: color 0.3s;
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      color: #e50d17;
+      background-color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      max-width: 142px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      /* margin-top: 50px; */
+    }
+
+    .dropdown-content a {
+      color: #1D4F9C;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      color: #e50d17;
+      background-color: #f9f9f9;
+    }
+
+    @media screen and (max-width: 900px) {
+      .navbar-large {
+        display: none;
+      }
+
+      .navbar-right {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 51px;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1500;
+      }
+
+      .navbar-right a {
+        display: block;
+        padding: 12px 24px;
+      }
+
+      .navbar-right.show {
+        display: flex;
+      }
+
+      .team-member {
+      flex-direction: column; /* Apilar los elementos en columna */
+      text-align: center; /* Centrar el texto */
+      width: 90%; /* Ajustar el tamaño a una mayor parte de la pantalla */
+      margin: 10px 0; /* Reducir los márgenes */
+    }
+
+    .team-member img {
+      width: 150px; /* Reducir el tamaño de la imagen */
+      height: auto;
+      margin: 10px 0; /* Reducir el margen alrededor de la imagen */
+    }
+
+    .team-member-description {
+      margin: 20px 0; /* Reducir el margen alrededor de la descripción */
+    }
+
+    .member-subtitle {
+      font-size: 16px; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+    }
+
+    h3 {
+      font-size: 18px; /* Reducir el tamaño de los subtítulos */
+      line-height: 1.5;
+    }
+    }
+
+    @media screen and (min-width: 901px) {
+      .navbar-small {
+        display: none;
+      }
+    }
+
+    .navbar button {
+      border: none;
+      background: none;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    /* END STYLE NAVBAR*/
+
+
+  </style>
+</head>
+<body>
+
+    <!-- Navbar para pantallas grandes -->
+    <div class="navbar navbar-large">
+      <a href="index.html" class="logo-link" style="padding-top: 8px; padding-bottom: 8px;">
+        <div style="display: flex; align-items: center;">
+          <img src="cabecera.png" alt="Estudio Jerkovic" class="logo">
+        </div>
+      </a>
+      <div class="navbar-right">
+        <a href="nosotros.html">Nosotros</a>
+        <div class="dropdown">
+          <button id="servicesBtn" class="dropbtn" onclick="toggleDropdown()">Servicios 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="servicesDropdown">
+            <a href="eventos.html">Eventos</a>
+            <a href="periodismo.html">Periodismo</a>
+            <a href="tramites.html">Trámites</a>
+          </div>
+        </div>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+
+    <!-- Navbar para pantallas pequeñas y medianas -->
+    <div class="navbar navbar-small">
+      <a href="index.html" class="logo-link" style="padding-top: 8px; padding-bottom: 8px;">
+        <div style="display: flex; align-items: center;">
+          <img src="cabecera.png" alt="Estudio Jerkovic" class="logo">
+        </div>
+      </a>
+      <button id="menuBtn" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="navbar-right" id="menuDropdown">
+        <a href="nosotros.html">Nosotros</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="periodismo.html">Periodismo</a>
+        <a href="tramites.html">Trámites</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+
+
+
+
+  <section class="about-section">
+    <h2 class="tramites-title">Contactanos</h2>
+    <div class="divider"></div>
+    
+        <div class="member-description">
+          <h3>Para consultas, comentarios o presupuestos escribinos</h3>
+</div>
+</div>
+
+    <div class="team-member">
+      <div class="member-description">
+        <h4 class="member-subtitle">
+            <i class="fa fa-map-marker" style="width:30px ; color: #1D4F9C">
+            </i>
+            Rosario, Santa Fe, Argentina
+            <br>
+            <br>
+            <i class="fa fa-phone" style="width:30px ; color: #1D4F9C">
+            </i>
+            WhatsApp: +54 9 341 202 1771
+            <br>
+            <br>
+            <i class="fa fa-envelope" style="width:30px ; color: #1D4F9C">
+            </i>
+            estudio.jerkovich@gmail.com
+            <br>
+        </h4>
+      </div>
+      <img src="logo-azul.png" alt="Logo azul" class="member-image">
+    </div>
+  </section>
+
+<br>
+
+<!-- Después del div.team-member -->
+<div class="contact-form">
+
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
+      </div>
+  
+      <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required placeholder="Escribe tu apellido">
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Escribe tu email">
+      </div>
+  
+      <div class="form-group">
+        <label for="paisText" class="form-label">País</label>
+        <input type="text" id="paisText" class="form-input" placeholder="Escribe tu país">
+        <div id="paisDropdown" class="pais-dropdown"></div>
+      </div>
+  
+      <div class="form-group">
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe un mensaje..."></textarea>
+      </div>
+  
+      <!-- Agregamos un captcha simple (puedes usar servicios externos más seguros en producción) -->
+      <div class="form-group">
+        <div class="g-recaptcha" data-sitekey="TU_SITE_KEY"></div>
+      </div>
+  
+      <div class="form-group">
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </div>
+
+
+  <footer style="height: 60px; background-color: #c5e1f1; text-align: center; display: flex; align-items: center;">
+    <div class="footer-icons" style="margin: 0 auto;">
+      <a href="https://www.linkedin.com/in/estudio-jerkovi%C4%87-bb799729b/" target="_blank"><i class="fab fa-linkedin" style="color: #1D4F9C; font-size: 30px; margin-right: 30px;"></i></a>
+      <a href="https://www.instagram.com/estudiojerkovic?igsh=MWtrNmo4azNqb2U3aQ==" target="_blank"><i class="fab fa-instagram" style="color: #1D4F9C; font-size: 30px;"></i></a>
+    </div>
+  </footer>
+
+
+<script>
+
+// Actualiza tu código JavaScript con lo siguiente
+document.addEventListener('DOMContentLoaded', function () {
+  var paisText = document.getElementById('paisText');
+  var paisDropdown = document.getElementById('paisDropdown');
+  var opcionesPaises = [
+    'Argentina', 'Croacia', 'Uruguay'
+    // Agrega más opciones según sea necesario
+  ];
+
+  paisText.addEventListener('input', function () {
+    var inputTexto = paisText.value.toLowerCase();
+    var opcionesCoincidentes = opcionesPaises.filter(function (pais) {
+      return pais.toLowerCase().startsWith(inputTexto);
+    });
+
+    // Actualiza el contenido del dropdown
+    paisDropdown.innerHTML = '';
+    opcionesCoincidentes.forEach(function (opcion) {
+      var optionElement = document.createElement('div');
+      optionElement.classList.add('pais-dropdown-item');
+      optionElement.textContent = opcion;
+      optionElement.addEventListener('click', function () {
+        paisText.value = opcion;
+        paisDropdown.style.display = 'none';
+      });
+      paisDropdown.appendChild(optionElement);
+    });
+
+    // Muestra u oculta el dropdown según haya coincidencias
+    paisDropdown.style.display = opcionesCoincidentes.length > 0 ? 'block' : 'none';
+  });
+
+  // Cierra el dropdown al hacer clic fuera de él
+  window.addEventListener('click', function (event) {
+    if (!event.target.matches('#paisText') && !event.target.matches('.pais-dropdown-item')) {
+      paisDropdown.style.display = 'none';
+    }
+  });
+
+   
+ // Asegurarse de que el dropdown esté alineado con el input
+    var formGroup = paisText.closest('.form-group');
+    var widthsvar = paisText.offsetWidth;
+    var final = (formGroup.offsetWidth - widthsvar) / 2;
+    console.log(widthsvar);
+    console.log(final);
+  if (formGroup) {
+    paisDropdown.style.position = 'absolute';
+    paisDropdown.style.top = formGroup.jhoffsetHeight + 'px'; // Coloca el dropdown justo debajo del input
+    paisDropdown.style.left = final  + 'px'; // Alinea el dropdown con el borde izquierdo del form-group
+   // paisDropdown.style.width = formGroup.offsetWidth + 'px'; // Hace que el dropdown tenga el mismo ancho que el input
+  }
+});
+
+      // JavaScript para manejar el menú desplegable en pantallas pequeñas y medianas
+      function toggleDropdown() {
+        var servicesDropdownSmall = document.getElementById("servicesDropdownSmall");
+        servicesDropdownSmall.classList.toggle("show");
+      }
+
+      function toggleMenu() {
+        var menuDropdown = document.getElementById("menuDropdown");
+        menuDropdown.classList.toggle("show");
+      }
+
+      // Cierra el menú desplegable si haces clic fuera de él
+      window.addEventListener('click', function (event) {
+        if (!event.target.matches('#menuBtn')) {
+          var menuDropdown = document.getElementById("menuDropdown");
+          if (menuDropdown.classList.contains('show')) {
+            menuDropdown.classList.remove('show');
+          }
+        }
+      });
+</script>
+
+</body>
+</html>

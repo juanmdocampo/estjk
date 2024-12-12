@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Superponer Contenedores con Contenido</title>
+  <style>
+    body {
+      font-family: 'Artifakt Element', sans-serif;
+      margin: 0;
+      margin-right: 0px;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f4; /* Fondo de color claro */
+    }
+
+    .contenedor-1 {
+      width: 40%;
+      background-color: white;
+      color: #1D4F9C; /* Color de texto azul */
+      text-align: justify;
+      padding: 20px; /* Añade un relleno para mayor espacio alrededor del texto */
+      padding-right: 70px;
+      box-shadow: 0 0 10px rgba(138, 138, 138, 0.79);
+    }
+
+    .contenedor-2 {
+      width: 150px;
+      height: 80%;
+      position: relative;
+      top: 0px;
+      left: -50px;
+      overflow: hidden; /* Asegura que la imagen no sobresalga del contenedor */
+    }
+
+    .imagen {
+      width: 100%;
+      height: auto;
+    }
+
+    h3, h4, p {
+      margin: 0; /* Elimina el margen por defecto de los elementos */
+    }
+
+    h3 {
+      line-height: 1.5; /* Ajusta el interlineado */
+    }
+
+    h4 {
+      line-height: 1.2;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="contenedor-1">
+    <h3>Jerkovic, Matija</h3>
+    <h4 class="member-subtitle">TRADUCCIONES / PERIODISMO</h4>
+    <p>Dr en Patrimonio Cultural egresado de la Universidad? Gregoriana de Roma
+        Traductor Público Oficial de idioma Croata - Español
+        Multilingüe (Croata, Español, Inglés,  Alemán, Italiano, Latín)
+        
+        Nuestro traductor Matija además de ser Traductor Oficial es nativo de Croacia por lo que es un plus a la hora de la interpretación. Además es corresponsal para medios croatas (TV, Radio, medios gráficos) es quien se encarga de generar el material periodístico.            
+    </p>
+  </div>
+
+  <div class="contenedor-2">
+    <img class="imagen" src="matija.jpeg" alt="Imagen en el contenedor 2">
+  </div>
+
+</body>
+</html>

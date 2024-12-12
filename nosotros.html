@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Nosotros</title>
+  <style>
+    body {
+      font-family: 'Artifakt Element', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .about-section {
+     position: relative;
+     display: flex; /* Agrega display: flex; para utilizar flexbox */
+     justify-content: center; /* Centra los elementos horizontalmente */
+     align-items: center; /* Centra los elementos verticalmente */
+     flex-direction: column; /* Alinea los elementos en columna */
+}
+
+    .header-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center top;
+      margin: 0;
+      padding: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-member {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 20px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(138, 138, 138, 0.79);
+      width: 60%;
+      text-align: justify;
+    }
+
+    .team-member img {
+      width: 200px; /* Ajusta el tamaño de la imagen según tus necesidades */
+      height: auto;
+      margin: 20px;
+    }
+
+    .member-description {
+       padding: 0 15px;
+    } 
+
+    .member-subtitle {
+      color: #1D4F9C;
+    }
+
+    .about_us {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0px;
+      padding: 0px;
+      width: 70%;
+      text-align: justify;
+    }
+
+    /* Estilos adicionales según tu preferencia */
+    h2{
+      color: #1D4F9C;
+    }
+
+    h3 {
+      color: #1D4F9C;
+      line-height:.5;
+      margin: 0px;
+    }
+
+    h4 {
+      color: #1D4F9C;
+      line-height:1.2;
+      text-align: left;
+    }
+
+    p {
+      color: #1D4F9C;
+      line-height:1.5;
+    }
+
+        /* STYLE FOR NAVBAR*/
+
+    .navbar {
+      height: 51px;
+      background-color: white;
+      overflow: hidden;
+      font-size: 18px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar img {
+      height: 35px;
+      width: 221px;
+      margin: 0;
+    }
+
+    .navbar a, .navbar button {
+      color: #1D4F9C;
+      text-align: center;
+      font-size: 18px;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: white;
+      transition: color 0.3s;
+      display: block;
+    }
+
+    .navbar a:hover, .navbar button:hover {
+      color: #e50d17;
+      background-color: white;
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .dropdown {
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 18px;
+      border: none;
+      outline: none;
+      color: #1D4F9C;
+      background-color: white;
+      font-family: inherit;
+      margin: 0;
+      cursor: pointer;
+      font-weight: bold;
+      transition: color 0.3s;
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      color: #e50d17;
+      background-color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      max-width: 142px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      /* margin-top: 50px; */
+    }
+
+    .dropdown-content a {
+      color: #1D4F9C;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      color: #e50d17;
+      background-color: #f9f9f9;
+    }
+
+    @media screen and (max-width: 900px) {
+      .navbar-large {
+        display: none;
+      }
+      .team-member {
+        flex-direction: column; /* Cambia la dirección de la fila a columna */
+        align-items: center; /* Centra los elementos */
+        width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
+        text-align: center; /* Centra el texto */
+      }
+      .team-member img {
+        margin-bottom: 10px; /* Añade espacio entre la imagen y el texto */
+        width: 80%; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+      }
+      .member-description {
+        padding: 15px 15px; /* Da un poco de espacio alrededor del texto */
+        text-align: justify; /* Justifica el texto */
+      }
+
+
+      .navbar-right {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 51px;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1500;
+      }
+
+      .navbar-right a {
+        display: block;
+        padding: 12px 24px;
+      }
+
+      .navbar-right.show {
+        display: flex;
+      }
+    }
+
+    @media screen and (min-width: 901px) {
+      .navbar-small {
+        display: none;
+      }
+    }
+
+    .navbar button {
+      border: none;
+      background: none;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    /* END STYLE NAVBAR*/
+
+  </style>
+</head>
+<body>
+
+
+    <!-- Navbar para pantallas grandes -->
+    <div class="navbar navbar-large">
+      <a href="index.html" class="logo-link" style="padding-top: 8px; padding-bottom: 8px;">
+        <div style="display: flex; align-items: center;">
+          <img src="cabecera.png" alt="Estudio Jerkovic" class="logo">
+        </div>
+      </a>
+      <div class="navbar-right">
+        <a href="nosotros.html">Nosotros</a>
+        <div class="dropdown">
+          <button id="servicesBtn" class="dropbtn" onclick="toggleDropdown()">Servicios 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="servicesDropdown">
+            <a href="eventos.html">Eventos</a>
+            <a href="periodismo.html">Periodismo</a>
+            <a href="tramites.html">Trámites</a>
+          </div>
+        </div>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+
+    <!-- Navbar para pantallas pequeñas y medianas -->
+    <div class="navbar navbar-small">
+      <a href="index.html" class="logo-link" style="padding-top: 8px; padding-bottom: 8px;">
+        <div style="display: flex; align-items: center;">
+          <img src="cabecera.png" alt="Estudio Jerkovic" class="logo">
+        </div>
+      </a>
+      <button id="menuBtn" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="navbar-right" id="menuDropdown">
+        <a href="nosotros.html">Nosotros</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="periodismo.html">Periodismo</a>
+        <a href="tramites.html">Trámites</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </div>
+
+<!-- END NAVBAR -->
+
+  
+  <section class="about-section">
+    <img src="equipoedit.jpg" alt="Equipo" class="header-image">
+    <h2 class="tramites-title">Sobre nosotros</h2>
+    <div class="divider"></div>
+    <div class="about_us">
+    <p>
+      Nuestro equipo está compuesto por profesionales dedicados a garantizar que cada proyecto se maneje con el cuidado 
+      necesario para lograr excelentes resultados. <br>
+      Todos nuestros miembros han vivido en Croacia, por lo que conocen profundamente el país y sus costumbres. <br>
+      Ofrecemos una amplia gama de servicios para apoyar cada proceso de principio a fin, incluyendo traducciones 
+      croata-español / español-croata, asesoramiento completo en el proceso de solicitud de ciudadanía croata,
+      organización de eventos a nivel nacional e internacional, y creación de contenido periodístico.
+      
+    </p>
+  </div>
+
+    <div class="team-member">
+      <img src="matija.jpeg" alt="Matija Jerkovic" class="member-image">
+      <div class="member-description">
+        <h3>Jerkovic, Matija</h3>
+        <h4 class="member-subtitle">TRADUCCIONES / PERIODISMO</h4>
+        <p>Dr en Patrimonio Cultural egresado de la Universidad Gregoriana de Roma <br>
+            Traductor Público Oficial de idioma Croata - Español <br>
+            Multilingüe (Croata, Español, Inglés,  Alemán, Italiano, Latín) <br>
+            <br>
+            Además de ser Traductor Oficial, Matija, nativo de Croacia, aporta un valor agregado en la interpretación 
+            de documentación e historia. Como corresponsal en Argentina para medios croatas (TV, Radio, medios gráficos), 
+            se encarga de la creación de contenido periodístico.            
+        </p>
+      </div>
+    </div>
+
+    <div class="team-member">
+      <div class="member-description">
+        <h3>Docampo, Camila</h3>
+        <h4 class="member-subtitle">DIRECCIÓN / COORDINACIÓN</h4>
+        <p>Egresada en artes escénicas <br>
+            Multilingüe (Croata, Español, Inglés, Italiano) <br>
+            <br>
+            Camila desempeña un rol crucial como encargada de la agenda del Estudio, organizando y coordinando procesos 
+            internos para garantizar un servicio efectivo y ágil. Además, gestiona y dirige eventos a nivel nacional e internacional.
+        </p>
+      </div>
+      <img src="camila.jpeg" alt="Camila Docampo" class="member-image">
+    </div>
+
+    <div class="team-member">
+      <img src="ivana.jpeg" alt="Ivana Pecarevic" class="member-image">
+      <div class="member-description">
+        <h3>Pecarevic, Ivana</h3>
+        <h4 class="member-subtitle">ASESORÍA / GESTIÓN Y CONTROL</h4>
+        <p>Lic. en Publicidad - Estudiante de abogacía <br>
+            Multilingüe (Croata, Español, Inglés) <br>
+            <br>
+            Ivana es quien se encarga de las asesorías, acompañando a nuestros clientes a lo largo de todo el proceso del trámite requerido 
+            y brindándoles toda la información necesaria. Su labor además incluye la realización de estrictos controles a los trabajos y 
+            preparación de carpetas para la entrega final.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    // JavaScript para manejar el menú desplegable en pantallas pequeñas y medianas
+    function toggleDropdown() {
+      var servicesDropdownSmall = document.getElementById("servicesDropdownSmall");
+      servicesDropdownSmall.classList.toggle("show");
+    }
+
+    function toggleMenu() {
+      var menuDropdown = document.getElementById("menuDropdown");
+      menuDropdown.classList.toggle("show");
+    }
+
+    // Cierra el menú desplegable si haces clic fuera de él
+    window.addEventListener('click', function (event) {
+      if (!event.target.matches('#menuBtn')) {
+        var menuDropdown = document.getElementById("menuDropdown");
+        if (menuDropdown.classList.contains('show')) {
+          menuDropdown.classList.remove('show');
+        }
+      }
+    });
+  </script>
+
+
+
+
+
+
+</body>
+</html>

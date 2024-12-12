@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Estudio Jerkovic</title>
+  <style>
+
+body {
+  margin: 0;
+  font-family: 'Artifakt Element', sans-serif;
+}
+
+/* Estilos específicos para la barra de navegación */
+.navbar {
+  height: 51px;
+  background-color: white;
+  overflow: hidden;
+  font-size: 18px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Asegura que la barra de navegación tenga posición relativa */
+  z-index: 1000; /* Ajusta el índice z para asegurar que esté sobre otros elementos */
+}
+
+.navbar img {
+  height: 35px;
+  width: 221px;
+  margin: 0;
+}
+
+.navbar a, .navbar button {
+  color: #1D4F9C;
+  text-align: center;
+  font-size: 18px;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: white;
+  transition: color 0.3s;
+  display: block;
+}
+
+.navbar a:hover, .navbar button:hover {
+  color: #e50d17;
+  background-color: white;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  overflow: hidden;
+  position: relative; /* Asegura que el contenedor de dropdown tenga posición relativa */
+  z-index: 1000; /* Ajusta el índice z para asegurar que esté sobre otros elementos */
+}
+
+.dropdown .dropbtn {
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: #1D4F9C;
+  background-color: white;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: #e50d17;
+  background-color: white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  max-width: 142px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2000; /* Ajusta el índice z para asegurar que esté sobre otros elementos */
+}
+
+.dropdown-content a {
+  color: #1D4F9C;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.dropdown-content a:hover {
+  color: #e50d17;
+  background-color: #f9f9f9;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Media queries para pantallas pequeñas y medianas */
+@media screen and (max-width: 900px) {
+  .navbar-large {
+    display: none;
+  }
+
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 51px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ajusta el índice z para asegurar que esté sobre otros elementos */
+  }
+
+  .navbar-right a {
+    display: block;
+    padding: 12px 24px;
+  }
+
+  .navbar-right.show {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .navbar-small {
+    display: none;
+  }
+}
+
+.navbar button {
+      border: none;
+      background: none;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    </style> 
+</head>
+<body>
+
+<!-- Navbar para pantallas grandes -->
+<div class="navbar navbar-large">
+  <a href="index.html" class="logo-link" style="padding-top: 8px; padding-bottom: 8px;">
+    <div style="display: flex; align-items: center;">
+      <img src="cabecera.png" alt="Estudio Jerkovic" class="logo">
+    </div>
+  </a>
+  <div class="navbar-right">
+    <a href="nosotros.html">Nosotros</a>
+    <div class="dropdown">
+      <button id="servicesBtn" class="dropbtn" onclick="toggleDropdown()">Servicios 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content" id="servicesDropdown">
+        <a href="eventos.html">Eventos</a>
+        <a href="periodismo.html">Periodismo</a>
+        <a href="tramites.html">Trámites</a>
+      </div>
+    </div>
+    <a href="faq.html">FAQ</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+</div>
+
+<!-- Navbar para pantallas pequeñas y medianas -->
+<div class="navbar navbar-small">
+  <a href="index.html" class="logo-link" style="padding-top: 8px; padding-bottom: 8px;">
+    <div style="display: flex; align-items: center;">
+      <img src="cabecera.png" alt="Estudio Jerkovic" class="logo">
+    </div>
+  </a>
+  <button id="menuBtn" onclick="toggleMenu()">
+    <i class="fa fa-bars"></i>
+  </button>
+  <div class="navbar-right" id="menuDropdown">
+    <a href="nosotros.html">Nosotros</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="periodismo.html">Periodismo</a>
+    <a href="tramites.html">Trámites</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+</div>
+
+<section class="tramites-section">
+  <h2 class="tramites-title">
+    <i class="fa-solid fa-calendar-days" style="margin-right: 5px;"></i>
+    Eventos</h2>
+  <div class="divider"></div>
+
+  <div class="tramite-container-wrapper">
+    <div class="tramite-container">
+      <h3>Organización de congresos y eventos Internacionales:</h3>
+      <p>Nos encargamos de planificar y ejecutar congresos y eventos de alcance internacional, asegurando una experiencia fluida y exitosa desde la conceptualización hasta la ejecución.
+    </p>
+    </div>
+
+    <div class="tramite-container">
+      <h3>Coordinación y logística:</h3>
+      <p>Ofrecemos servicios detallados de coordinación y logística para garantizar que cada aspecto de tu evento se desarrolle sin problemas.
+      </p>
+    </div>
+
+    <div class="tramite-container">
+      <h3>Conducción/presentador/locutor:</h3>
+      <p>Contamos con profesionales capacitados para ser la voz del evento, asegurando un ambiente cautivador y profesional.
+      </p>
+    </div>
+
+    <div class="tramite-container">
+      <h3>Equipo de intérpretes:</h3>
+      <p>Proporcionamos servicios de interpretación simultánea y traductores consecutivos para asegurar una comunicación efectiva en eventos multilingües, facilitando la comprensión y colaboración entre participantes de diferentes idiomas.
+      </p>
+    </div>
+
+    <div class="evento-container image-container">
+        <img src="eventos1.jpg" alt="Imagen Eventos" class="event-image">
+    </div>
+
+  </div>
+</section>
+
+<section class="tramites-section">
+  <h2 class="tramites-title">
+    <i class="fa-regular fa-newspaper" style="margin-right: 5px;"></i>
+    Periodismo</h2>
+  <div class="divider"></div>
+
+  <div class="tramite-container-wrapper">
+    <div class="tramite-container">
+      <h3>Generación de Material Periodístico:</h3>
+      <p>Creamos contenido periodístico que presenta la realidad argentina a través de un enfoque europeo, ofreciendo perspectivas únicas y relevantes.
+      </p>
+    </div>
+
+    <div class="tramite-container">
+        <h3>Servicio de traducción y producción para medios internacionales en Argentina:</h3>
+        <p>Facilitamos la comunicación global al proporcionar servicios de traducción y producción para medios internacionales que buscan informar desde Argentina.
+        </p>
+    </div>
+
+    <div class="tramite-container">
+      <h3>Servicio técnico en Argentina:</h3>
+      <p>Ofrecemos soporte técnico completo, desde cámaras hasta montaje, para garantizar la calidad técnica de tus producciones en Argentina.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+    function toggleDropdown() {
+      var servicesDropdownSmall = document.getElementById("servicesDropdownSmall");
+      servicesDropdownSmall.classList.toggle("show");
+    }
+
+    function toggleMenu() {
+      var menuDropdown = document.getElementById("menuDropdown");
+      menuDropdown.classList.toggle("show");
+    }
+
+    // Cierra el menú desplegable si haces clic fuera de él
+    window.addEventListener('click', function (event) {
+      if (!event.target.matches('#menuBtn')) {
+        var menuDropdown = document.getElementById("menuDropdown");
+        if (menuDropdown.classList.contains('show')) {
+          menuDropdown.classList.remove('show');
+        }
+      }
+    });
+</script>
+
+</body>
+</html>
